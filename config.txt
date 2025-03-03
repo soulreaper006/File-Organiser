@@ -1,0 +1,15 @@
+.txt Documents
+.jpg Images
+.mp4 Videos
+.iso OS
+.mkv Videos
+.exe Program
+.zip Archive
+.rar Archive\RAR
+.png Images\Png
+.pdf Documents\Pdf
+.pptx Documents\PPt
+.doc Documents
+.msi Program
+.jpeg Images\Jpeg
+.7z Archive\7z
