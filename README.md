@@ -23,8 +23,7 @@ This Python script provides a **graphical user interface (GUI)** for organizing 
 📜 Displays real-time logs in a text box to inform users about moved files.  
 📢 Shows success and error messages through message boxes.  
 
-### **5️⃣ Error Handling**  
-⚠️ Alerts the user if the `config.txt` file is missing.  
+### **5️⃣ Error Handling**    
 ✅ Checks if the selected directory is valid before proceeding.  
 🛑 Handles missing categories gracefully to avoid unexpected behavior.  
 
@@ -39,8 +38,7 @@ This Python script provides a **graphical user interface (GUI)** for organizing 
   - 📂 `os` → Directory and file handling.  
 
 - **🔢 Required Input**:  
-  - 📁 A valid directory containing files.  
-  - 🗂️ A `config.txt` file defining file extension mappings (e.g., `.jpg Images`).  
+  - 📁 A valid directory containing files.   
 
 - **📤 Output**:  
   - 🎯 Files get automatically sorted into subfolders inside the selected directory.  
