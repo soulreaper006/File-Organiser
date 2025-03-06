@@ -3,18 +3,27 @@ import shutil
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
-def load_categories(config_file):
-    categories = {}
-    if not os.path.exists(config_file):
-        messagebox.showerror("Error", "Config file not found!")
-        return categories
-    
-    with open(config_file, "r") as file:
-        for line in file:
-            parts = line.strip().split()
-            if len(parts) == 2:
-                extension, category = parts
-                categories[extension] = category
+def load_categories():
+    categories = {
+        ".txt": "Documents\Text Files",
+        ".jpg": "Images",
+        ".jpeg": "Images",
+        ".png": "Images\Png",
+        ".pdf": "Documents\Pdf",
+        ".docx": "Documents",
+        ".xlsx": "Documents\Spreadsheets",
+        ".csv": "Documents\Spreadsheets\CVS",
+        ".pptx": "Documents\PPT",
+        ".mp3": "Music",
+        ".mp4": "Videos\MP4",
+        ".mkv": "Videos\MkV",
+        ".zip": "Archives\Zip",
+        ".7z": "Archives\_7Z",
+        ".rar": "Archives\Rar",
+        ".ios": "OS",
+        ".exe": "Program",
+        ".msi": "Program"
+    }
     return categories
 
 def organize_files(directory, categories):
@@ -43,7 +52,7 @@ def start_organization():
     if not directory:
         messagebox.showerror("Error", "Please select a directory!")
         return
-    categories = load_categories("config.txt")
+    categories = load_categories()
     if categories:
         organize_files(directory, categories)
 
@@ -57,6 +66,7 @@ directory_var = tk.StringVar()
 tk.Label(root, text="Select Directory:").pack(pady=5)
 tk.Entry(root, textvariable=directory_var, width=50).pack(pady=5)
 tk.Button(root, text="Browse", command=select_directory).pack(pady=5)
+
 tk.Button(root, text="Organize Files", command=start_organization).pack(pady=10)
 
 log_text = tk.Text(root, height=12, width=60)
