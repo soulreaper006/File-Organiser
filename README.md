@@ -61,5 +61,3 @@ A fun and simple **drag-and-drop** file organizer tool built with Python's `tkin
   *(just standard stuff like `tkinter`, `os`, `shutil`, etc.)*
 
 ---
-
-## 📁 Example Output (PDF)
